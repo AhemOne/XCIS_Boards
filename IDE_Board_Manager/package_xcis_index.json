@@ -30,16 +30,7 @@
             }
           ],
           "toolsDependencies": []
-        }
-      ]
-    },
-    {
-      "maintainer": "XCIS Australia Pty Ltd",
-      "help": {
-        "online": "http://www.xcis.com.au"
-      },
-      "websiteURL": "https://github.com/AhemOne/XCIS_Boards",
-      "platforms": [
+        },
         {
           "category": "Contributed",
           "name": "XCIS ESP8266 Boards",
@@ -330,9 +321,7 @@
             }
           ]
         }
-      ],
-      "email": "ivan@esp8266.com",
-      "name": "esp8266"
+      ]
     }
   ]
 }
