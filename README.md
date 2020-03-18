@@ -23,11 +23,11 @@ Open the Boards Manager window by selecting **Tools** > **Board**, scroll to the
 
 Ttype "xcis" (without quotes) into the "filter your search" field. Click in the desired box, and click the "Install" button that appears. Once installed, the boards will appear at the bottom of the board list.
 
-### ESP8266 Boards?
+### ESP8266 Boards
 
 All support for our ESP based boards are supported within their respective Espressif's Repository. 
 
-* For our ESP8266 based boards: [Blynk](https://www.sparkfun.com/products/13794), [ESP8266 Thing](https://www.sparkfun.com/products/13231), or [ESP8266 Thing Dev](https://www.sparkfun.com/products/13711), you can install the board files by following the instructions [here](https://github.com/esp8266/Arduino).
+* Follow the instructions [here](https://github.com/esp8266/Arduino).
 
 ### Notes
 
