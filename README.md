@@ -8,7 +8,7 @@ This repository contains support for XCIS Arduino-like board variants.
 
 #### ESP8266 Boards
 _These boards are supported by [Espressif](https://github.com/esp8266/Arduino)_.
-* [ESP8266 Thing](https://www.xcis.com.au)
+* [Gateway](https://www.xcis.com.au)
 
 ### Installation Instructions
 
