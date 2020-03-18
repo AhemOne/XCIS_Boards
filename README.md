@@ -14,7 +14,7 @@ _These boards are supported by [Espressif](https://github.com/esp8266/Arduino)_.
 
 Start Arduino and open the Preferences window (**File** > **Preferences**). Copy and paste the following URL into the 'Additional Boards Manager URLs' input field:
 
-	https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
+	https://github.com/AhemOne/XCIS_Boards/blob/master/IDE_Board_Manager/package_xcis_index.json
 
 
 ### AVR Installation Instructions
