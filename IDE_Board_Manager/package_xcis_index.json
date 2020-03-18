@@ -10,17 +10,16 @@
       },
       "platforms": [
         {
-          "name": "XCIS AVR Boards",
-          "architecture": "avr",
-          "version": "1.0.0",
           "category": "Contributed",
+          "name": "XCIS AVR Boards",
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-avr-1.0.0.tar.bz2",
-          "archiveFileName": "xcis-avr-1.0.0.tar.bz2",
-          "checksum": "SHA-256:D7AF391CAFC5E16830CAC7C13484EF62765DD7A36AABA5F25020CE3C39617115",
-          "size": "1257480",
+          "checksum": "SHA-256:89480C355876966DB68504E4E4130719942320AECF0AD6AEF819299796B22202",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
+          "version": "1.0.0",
+          "architecture": "avr",
+          "archiveFileName": "xcis-avr-1.0.0.tar.bz2",
           "boards": [
             {
               "name": "Node"
@@ -29,7 +28,8 @@
               "name": "Device"
             }
           ],
-          "toolsDependencies": []
+          "toolsDependencies": [],
+          "size": "1238253"
         },
         {
           "category": "Contributed",
