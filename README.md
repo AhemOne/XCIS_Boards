@@ -7,7 +7,7 @@ This repository contains support for XCIS Arduino-like board variants.
 * [Device](https://www.xcis.com.au)
 
 #### ESP8266 Boards
-_These boards are supported by [Espressif](https://github.com/esp8266/Arduino)_. :+1:
+_These boards are supported by [Espressif](https://github.com/esp8266/Arduino)_.
 * [ESP8266 Thing](https://www.xcis.com.au)
 
 ### Installation Instructions
@@ -20,8 +20,6 @@ Start Arduino and open the Preferences window (**File** > **Preferences**). Copy
 ### AVR Installation Instructions
 
 Open the Boards Manager window by selecting **Tools** > **Board**, scroll to the top of the board list, and select **Boards Manager**.
-
-![Boards Manager Menu](manager-menu.png)
 
 Ttype "xcis" (without quotes) into the "filter your search" field. Click in the desired box, and click the "Install" button that appears. Once installed, the boards will appear at the bottom of the board list.
 
