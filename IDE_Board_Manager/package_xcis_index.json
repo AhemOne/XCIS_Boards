@@ -44,7 +44,7 @@
           "archiveFileName": "xcis-esp8266-1.0.0.tar.bz2",
           "boards": [
             {
-              "name": "XCIS Gateway Board"
+              "name": "Gateway"
             }
           ],
           "toolsDependencies": [
