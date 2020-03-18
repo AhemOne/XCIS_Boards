@@ -1,0 +1,62 @@
+# XCIS board Configuration
+#
+# For more information see:
+# * https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
+# * https://github.com/arduino/Arduino/wiki/Arduino-Hardware-Cores-migration-guide-from-1.0-to-1.6
+#
+# modified from sparkfun implementation of digital sandbox board
+
+menu.cpu=Processor
+
+################################################################################
+###################################### Node ####################################
+################################################################################
+
+node.name=XCIS Node
+node.build.board=AVR_NODE
+
+node.upload.tool=arduino:avrdude
+node.upload.protocol=arduino
+node.upload.maximum_size=32256
+node.upload.speed=57600
+node.upload.maximum_data_size=2048
+
+node.bootloader.low_fuses=0xFF
+node.bootloader.high_fuses=0xDE
+node.bootloader.extended_fuses=0x05
+node.bootloader.file=optiboot/optiboot_atmega328.hex
+node.bootloader.unlock_bits=0x3F
+node.bootloader.lock_bits=0x2F
+node.bootloader.tool=arduino:avrdude
+
+node.build.mcu=atmega328p
+node.build.f_cpu=8000000L
+node.build.core=arduino:arduino
+node.build.variant=node
+
+
+################################################################################
+##################################### Device ###################################
+################################################################################
+
+device.name=XCIS Device
+device.build.board=AVR_DEVICE
+
+device.upload.tool=arduino:avrdude
+device.upload.protocol=arduino
+device.upload.maximum_size=32256
+device.upload.speed=57600
+device.upload.maximum_data_size=2048
+
+device.bootloader.low_fuses=0xFF
+device.bootloader.high_fuses=0xDE
+device.bootloader.extended_fuses=0x05
+device.bootloader.file=optiboot/optiboot_atmega328.hex
+device.bootloader.unlock_bits=0x3F
+device.bootloader.lock_bits=0x2F
+device.bootloader.tool=arduino:avrdude
+
+device.build.mcu=atmega328p
+device.build.f_cpu=8000000L
+device.build.core=arduino:arduino
+device.build.variant=device
