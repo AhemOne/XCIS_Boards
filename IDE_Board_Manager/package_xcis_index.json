@@ -46,7 +46,7 @@
           "category": "Contributed",
           "name": "xcis",
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.zip",
-          "checksum": "SHA-256:e14bddacedeb4e5a30530e5f4e66db892fa1b8b433022822d7924b26a9417e265",
+          "checksum": "SHA-256:14bddacedeb4e5a30530e5f4e66db892fa1b8b433022822d7924b26a9417e265",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
