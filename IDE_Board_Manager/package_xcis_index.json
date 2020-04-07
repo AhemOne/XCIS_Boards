@@ -13,7 +13,7 @@
           "category": "Contributed",
           "name": "XCIS AVR Boards",
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-avr-1.0.0.tar.bz2",
-          "checksum": "SHA-256:89480C355876966DB68504E4E4130719942320AECF0AD6AEF819299796B22202",
+          "checksum": "SHA-256:a76c5989179cb97b8dc797b39d69a3c5c5e6e4cd92e0f1ab4a3a9140fd9ca1db",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
@@ -46,7 +46,7 @@
           "category": "Contributed",
           "name": "xcis",
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.tar.bz2",
-          "checksum": "SHA-256:6A3722A50B09DCEF92818B5C0E5A6C752E84181F1ABFD0959DACC39D8E2F1C94",
+          "checksum": "SHA-256:4fe45b626387a0d0c10b98564f68b89f3b693ad5ec629ab12e99a62910a5b073",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
