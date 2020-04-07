@@ -12,14 +12,14 @@
         {
           "category": "Contributed",
           "name": "XCIS AVR Boards",
-          "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-avr-1.0.0.tar.bz2",
+          "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-avr-1.0.0.zip",
           "checksum": "SHA-256:a76c5989179cb97b8dc797b39d69a3c5c5e6e4cd92e0f1ab4a3a9140fd9ca1db",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
           "version": "1.0.0",
           "architecture": "xcisavr",
-          "archiveFileName": "xcis-avr-1.0.0.tar.bz2",
+          "archiveFileName": "xcis-avr-1.0.0.zip",
           "boards": [
             {
               "name": "XCIS Node"
@@ -45,14 +45,14 @@
         {
           "category": "Contributed",
           "name": "xcis",
-          "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.tar.bz2",
+          "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.zip",
           "checksum": "SHA-256:4fe45b626387a0d0c10b98564f68b89f3b693ad5ec629ab12e99a62910a5b073",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
           "version": "1.0.0",
           "architecture": "xcisesp8266",
-          "archiveFileName": "xcis-esp8266-1.0.0.tar.bz2",
+          "archiveFileName": "xcis-esp8266-1.0.0.zip",
           "boards": [
             {
               "name": "XCIS Gateway"
