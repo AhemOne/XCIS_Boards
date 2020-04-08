@@ -46,7 +46,7 @@
           "category": "Contributed",
           "name": "XCIS ESP8266 Boards",
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.zip",
-          "checksum": "SHA-256:017af3c12f9242701c88a2223c3af1633aace6793d97fcace3e8d2f6c99105cb",
+          "checksum": "SHA-256:903f5d39681dd020951c32af3876838cf98854b5f73df8b60967c38c6b31c2ed",
           "help": {
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
