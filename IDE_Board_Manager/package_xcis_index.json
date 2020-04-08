@@ -298,57 +298,57 @@
           ]
         },
         {
-          "version": "2.2.0-191122",
-          "name": "sdk",
+          "version": "2.6.3",
+          "name": "esp8266",
           "systems": [
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:26665d2925ee75118bb7d8620e9ee988adc2ca3e660a9f4c06a09a06c94c0c29",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "x86_64-mingw32",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "6431781"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             },
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:26665d2925ee75118bb7d8620e9ee988adc2ca3e660a9f4c06a09a06c94c0c29",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "i686-mingw32",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "6431781"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             },
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:3b32fdb0905abf97e923ff968b6a0da8ce85d632b27845d7e2fc759778778785",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "aarch64-linux-gnu",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "193"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             },
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:3b32fdb0905abf97e923ff968b6a0da8ce85d632b27845d7e2fc759778778785",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "arm-linux-gnueabihf",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "193"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             },
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:3b32fdb0905abf97e923ff968b6a0da8ce85d632b27845d7e2fc759778778785",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "i686-pc-linux-gnu",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "193"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             },
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:3b32fdb0905abf97e923ff968b6a0da8ce85d632b27845d7e2fc759778778785",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "x86_64-apple-darwin",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "193"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             },
             {
-              "url": "https://github.com/",
-              "checksum": "SHA-256:3b32fdb0905abf97e923ff968b6a0da8ce85d632b27845d7e2fc759778778785",
+              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
               "host": "x86_64-pc-linux-gnu",
-              "archiveFileName": "esp8266-sdk-2.2.0-191122.zip",
-              "size": "193"
+              "archiveFileName": "esp8266-2.6.3.zip",
+              "size": "34257589"
             }
           ]
         },
