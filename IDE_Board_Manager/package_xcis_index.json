@@ -82,7 +82,7 @@
             {
               "packager": "xcis",
               "version": "2.6.3",
-              "name": "esp8266"
+              "name": "esp8266core"
             }
           ],
           "size": "1905291"
@@ -304,7 +304,7 @@
         },
         {
           "version": "2.6.3",
-          "name": "esp8266",
+          "name": "esp8266core",
           "systems": [
             {
               "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
