@@ -1,0 +1,35 @@
+{
+  "packages": [
+    {
+      "name": "blank",
+      "maintainer": "no one",
+      "websiteURL": "noWeb",
+      "email": "no@mail",
+      "help": {
+        "online": "noHelp"
+      },
+      "platforms": [
+        {
+          "category": "Contributed",
+          "name": "Blank None",
+          "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
+          "version": "1.0.0",
+          "architecture": "none",
+          "archiveFileName": "nozip.zip",
+          "help": {
+            "online": "stillNoHelp"
+          },
+          "size": "11111",
+          "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1"
+          "boards": [
+            {
+              "name": "Blank Invariant"
+            }
+          ],
+          "toolsDependencies": [],
+        }
+      ],
+      "tools": []
+    }
+  ]
+}
