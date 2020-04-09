@@ -14,7 +14,7 @@
           "name": "Blank None",
           "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
           "version": "1.0.0",
-          "architecture": "none",
+          "architecture": "archless",
           "archiveFileName": "nozip.zip",
           "help": {
             "online": "stillNoHelp"
