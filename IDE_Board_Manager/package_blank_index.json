@@ -20,13 +20,13 @@
             "online": "stillNoHelp"
           },
           "size": "11111",
-          "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1"
+          "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
           "boards": [
             {
               "name": "Blank Invariant"
             }
           ],
-          "toolsDependencies": [],
+          "toolsDependencies": []
         }
       ],
       "tools": []
