@@ -18,7 +18,7 @@
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
           "version": "1.0.0",
-          "architecture": "xcisavr",
+          "architecture": "avr",
           "archiveFileName": "xcis-avr-1.0.0.zip",
           "boards": [
             {
@@ -30,12 +30,12 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "xcis",
+              "packager": "arduino",
               "name": "avr-gcc",
               "version": "5.4.0-atmel3.6.1-arduino2"
             },
             {
-              "packager": "xcis",
+              "packager": "arduino",
               "name": "avrdude",
               "version": "6.3.0-arduino14"
             }
@@ -51,7 +51,7 @@
             "online": "https://github.com/AhemOne/XCIS_Boards"
           },
           "version": "1.0.0",
-          "architecture": "xcisesp8266",
+          "architecture": "esp8266",
           "archiveFileName": "xcis-esp8266-1.0.0.zip",
           "boards": [
             {
@@ -60,22 +60,22 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "xcis",
+              "packager": "esp8266",
               "version": "2.5.0-4-b40a506",
               "name": "xtensa-lx106-elf-gcc"
             },
             {
-              "packager": "xcis",
+              "packager": "esp8266",
               "version": "2.5.0-4-b40a506",
               "name": "mkspiffs"
             },
             {
-              "packager": "xcis",
+              "packager": "esp8266",
               "version": "2.5.0-4-69bd9e6",
               "name": "mklittlefs"
             },
             {
-              "packager": "xcis",
+              "packager": "esp8266",
               "version": "3.7.2-post1",
               "name": "python3"
             },
