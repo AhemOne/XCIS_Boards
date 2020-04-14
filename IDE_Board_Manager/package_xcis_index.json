@@ -44,7 +44,7 @@
         },
         {
           "name": "XCIS ESP8266 Boards",
-          "architecture": "xcisesp8266",
+          "architecture": "esp8266",
           "version": "1.0.0",
           "category": "Contributed",
           "help": {
