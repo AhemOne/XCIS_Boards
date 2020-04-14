@@ -76,7 +76,7 @@
               "name": "mklittlefs"
             },
             {
-              "packager": "esp8266",
+              "packager": "xcis",
               "version": "3.7.2-post1",
               "name": "python3"
             },
