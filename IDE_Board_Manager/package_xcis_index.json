@@ -52,8 +52,8 @@
           },
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.zip",
           "archiveFileName": "xcis-esp8266-1.0.0.zip",
-          "checksum": "SHA-256:36f8beb8b8571313529413becee330ace22c7a8e9ad537b9bb732e087d25b6e2",
-          "size": "5834657",
+          "checksum": "SHA-256:e5766effb68bd28048b3ebe227bf1eff4979af1779f65512fc48484bbf40e5b9",
+          "size": "5834723",
           "boards": [
             {
               "name": "XCIS Gateway"
