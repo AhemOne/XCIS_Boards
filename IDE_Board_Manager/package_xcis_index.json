@@ -19,8 +19,8 @@
           "version": "1.0.0",
           "architecture": "avr",
           "archiveFileName": "xcis-avr-1.0.0.zip",
-          "checksum": "SHA-256:0b80a07835b4e6e9f2cf15e239479a0b89a836261bd860e4a2448f253a479c26",
-          "size": "148231",
+          "checksum": "SHA-256:c20dcfa05aa98b3b9fca9dd7926efe6653c013878d21eac29d7b4bfd53286064",
+          "size": "71217",
           "boards": [
             {
               "name": "XCIS Node"
@@ -52,8 +52,8 @@
           },
           "url": "https://github.com/AhemOne/XCIS_Boards/raw/master/IDE_Board_Manager/xcis-esp8266-1.0.0.zip",
           "archiveFileName": "xcis-esp8266-1.0.0.zip",
-          "checksum": "SHA-256:e5766effb68bd28048b3ebe227bf1eff4979af1779f65512fc48484bbf40e5b9",
-          "size": "5834723",
+          "checksum": "SHA-256:d5a702603b4c8c639f68711364222dc83b6e38a1d1b07fc9c95228f011a3b294",
+          "size": "5807741",
           "boards": [
             {
               "name": "XCIS Gateway"
@@ -76,14 +76,9 @@
               "name": "mklittlefs"
             },
             {
-              "packager": "xcis",
+              "packager": "esp8266",
               "version": "3.7.2-post1",
               "name": "python3"
-            },
-            {
-              "packager": "xcis",
-              "version": "2.6.3",
-              "name": "esp8266core"
             }
           ]
         }
@@ -299,61 +294,6 @@
               "archiveFileName": "python3-placeholder.tar.gz",
               "checksum": "SHA-256:d8cf9d9d66423d7b90978ebe285a73a6e8611995cd0d5e6273e929a0cf2c9850",
               "size": "191"
-            }
-          ]
-        },
-        {
-          "version": "2.6.3",
-          "name": "esp8266core",
-          "systems": [
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "x86_64-mingw32",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
-            },
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "i686-mingw32",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
-            },
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "aarch64-linux-gnu",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
-            },
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "arm-linux-gnueabihf",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
-            },
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "i686-pc-linux-gnu",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
-            },
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "x86_64-apple-darwin",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
-            },
-            {
-              "url": "https://github.com/esp8266/Arduino/releases/download/2.6.3/esp8266-2.6.3.zip",
-              "checksum": "SHA-256:88579fb05bb7fda0b09bfbb325abd0eea15e51e9b09d57bd9eb0ff8c51af5bf1",
-              "host": "x86_64-pc-linux-gnu",
-              "archiveFileName": "esp8266-2.6.3.zip",
-              "size": "34257589"
             }
           ]
         },
