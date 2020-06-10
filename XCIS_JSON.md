@@ -12,7 +12,7 @@ where:
 + `deviceName` - The generic name of the device, eg. WaterTank. If nodes are re-named the node will reply its given name instead of the generic Node name.
 
 Example:
-+ `{ "Water Tank" = [ { "Level" = "50%", }, { "Volume" = "509", "U" = "L" }, { "Change" = [ { "height" = 1000 }, { "width" = 600 }, { "space" = 100 ] } ] }` - A Water tank level sensor which is currently at 50% and contains 509 L of water, whose sensor is mounted 1000 mm above the ground, the tank has a width (diameter) of 600 mm and the tank is considered full when there is a space of 100 mm below the sensor position.
++ `{ "Water Tank" : [ { "Level" : "50%", }, { "Volume" : "509", "U" : "L" }, { "Change" : [ { "height" : 1000 }, { "width" : 600 }, { "space" : 100 ] } ] }` - A Water tank level sensor which is currently at 50% and contains 509 L of water, whose sensor is mounted 1000 mm above the ground, the tank has a width (diameter) of 600 mm and the tank is considered full when there is a space of 100 mm below the sensor position.
 
 ## device_parameter
 
@@ -22,34 +22,34 @@ A device_parameter may be a device_function (input) or device_variable (output).
 
 if device_parameter = `device_function` the following syntax is used
 
-`device_function` - `{ "functionName" = [ function_parameter[1], function_parameter[2], function_parameter[...], function_parameter[N] ] }`
+`device_function` - `{ "functionName" : [ function_parameter[1], function_parameter[2], function_parameter[...], function_parameter[N] ] }`
 
 where:
 + `functionName` - The name of a function which may be called by the user.
 
 Example:
-+ `{ "pump" = { "power" = 60 }, { "timer" = 100 } }` - There is a pump, which is set to power of 60% and a timer with 100s remaining, however both these values could be modified if the user chooses.
++ `{ "pump" : [ { "power" : 60 }, { "timer" : 100 } ] }` - There is a pump, which is set to power of 60% and a timer with 100s remaining, however both these values could be modified if the user chooses.
 
 #### param_desc
 
-function_parameter - `{ "parameterName" = defaultValue }`
+function_parameter - `{ "parameterName" : defaultValue }`
 
 Where:
 + `parameterName` - The name of a parameter which can be passed to a function as a request. This name should be descriptive of the variables purpose rather than reflective of the variables name in code as it is what would be displayed to the end user.
 + `defaultValue` - A JSON type which is not an array of objects. This should be a default value for a request, it could be the current value which is being modified or a default value which can be recognised as something to ignore.
 
 Example:
-+ `{ "Height" = 1500 }`
++ `{ "Height" : 1500 }`
 
 #### device_variable
 
 ** No Units **
 
-device_variable - `{ "variableName" = variableValue }`
+device_variable - `{ "variableName" : variableValue }`
 
 ** With Units **
 
-device_variable - `{ "variableName" = variableValue, "U" = "unitName" }`
+device_variable - `{ "variableName" : variableValue, "U" : "unitName" }`
 
 Where:
 + `variableName` - The descriptive name of a variable
@@ -57,16 +57,16 @@ Where:
 + `unitName` - a string representing a readable expression of the units
 
 Examples:
-+ `{ "Tank Height" = 2423 , "U" = "mm" }`
-+ `{ "Gate Position" = "Open" }`
++ `{ "Tank Height" : 2423 , "U" : "mm" }`
++ `{ "Gate Position" : "Open" }`
 
 ### gateway_request
 
-gateway_request = `{ "node" = NodeID, "device" = deviceID, "functionName" = [ param[1], param[2], param[...], param[N] ] }`
+gateway_request = `{ "node" : NodeID, "device" : DeviceID, "functionName" : [ param[1], param[2], param[...], param[N] ] }`
 
 Where:
 + `NodeID` - The ID number of the node being addressed
-+ `deviceID` - The position along the string of devices being addressed
++ `DeviceID` - The position along the string of devices being addressed
 + `functionName` - a string representing the name of the function being requested
 + `param[k]` - a variable which represents the k-th parameter
 
@@ -78,7 +78,7 @@ Consider a water tank sensor with the following [device_function](#device_functi
 
 Perhaps a farmer installs an overflow to their tank 200 mm below the lid, now the tank will never reach 100 mm below. The farmer requests the water tank sensor "space" be set to 200 instead of 100. An example request should be formed like (numbers are made up):
 
-`{ "node" = 4, "device" = 2, "Change" = [ { "height" = 1000 }, { "width" = 600 }, { "space" = 200 } ] }`
+`{ "node" : 4, "device" : 2, "Change" : [ { "height" : 1000 }, { "width" : 600 }, { "space" : 200 } ] }`
 
 
 ## Gateway
