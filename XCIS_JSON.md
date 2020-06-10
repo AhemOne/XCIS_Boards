@@ -89,6 +89,100 @@ JSON is obtained from:
 + /lora - Request objects cached by the Gateway
   + reply = `[ node_device[1], node_device[2], node_device[...], node_device[N] ]`
     + `node_device[k]` - the k-th node
+    
+  + example: 
+  ```
+  [ 
+    [ 
+      { 
+        "Node" = [ 
+          { "Battery" = "3.2", "U" = "V" },
+          { 
+            "Reset" = [ 
+              { "now" = 0 }
+            ] 
+          } 
+        ] 
+      }, { 
+        "Water Tank" = [ 
+          { "Level" = "80%", }, 
+          { "Volume" = "814", "U" = "L" }, 
+          { 
+            "Change" = [ 
+              { "height" = 1000 }, { "width" = 600 }, { "space" = 100 }
+            ] 
+          } 
+        ] 
+      }
+    ], [ 
+      { 
+        "Node" = [ 
+          { "Battery" = "3.3", "U" = "V" },
+          { 
+            "Reset" = [ 
+              { "now" = 0 }
+            ] 
+          } 
+        ] 
+      }, { 
+        "Water Tank" = [ 
+          { "Level" = "50%", }, 
+          { "Volume" = "509", "U" = "L" }, 
+          { 
+            "Change" = [ 
+              { "height" = 1000 }, { "width" = 600 }, { "space" = 100 }
+            ] 
+          } 
+        ] 
+      }, { 
+        "Bore Pump" = [ 
+          { "Volume" = "10", "U" = "L/s" }, 
+          { 
+            "Change" = [ 
+              { "speed" = 50 }, { "Runtime" = 60 }
+            ] 
+          }, { 
+            "param" = [ 
+              { "maxrate" = 20 }
+            ] 
+          } 
+        ] 
+      }
+    ], [ 
+      { 
+        "Tank Node" = [ 
+          { "Battery" = "3.2", "U" = "V" },
+          { "Water" = "50%", }, 
+          { 
+            "Reset" = [ 
+              { "now" = 0 }
+            ] 
+          }, { 
+            "Change" = [ 
+              { "height" = 1000 }, { "width" = 600 }, { "space" = 100 }
+            ] 
+          }
+        ] 
+      }
+    ], [ 
+      { 
+        "Node" = [ 
+          { "Battery" = "3.2", "U" = "V" },
+          { 
+            "Reset" = [ 
+              { "now" = 0 }
+            ] 
+          } 
+        ] 
+      }, { 
+        "Gate" = [ 
+          { "Position" = "Closed", }, 
+          { "Set gate" = [ { } ] }
+        ] 
+      }
+    ] 
+  ]
+  ```
 
 + /lora?id=k
   + reply = `[ node_device[1] ]`
