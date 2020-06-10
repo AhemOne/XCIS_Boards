@@ -110,3 +110,5 @@ Where:
 + registered_device[k] - Data from the k-th device attached to Node
 
 ### LoRa
+
+Coming Soon - more will be updated as needed
