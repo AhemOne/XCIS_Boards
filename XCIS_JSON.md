@@ -6,7 +6,7 @@ JSON is used to transfer data between the device, node, gateway then out to the 
 
 ## registered_device
 
-`registered_device` - `{ "deviceName" = [ device_parameter[1], device_parameter[2], device_parameter[...], device_parameter[N] ] }`
+registered_device - `{ "deviceName" = [ device_parameter[1], device_parameter[2], device_parameter[...], device_parameter[N] ] }`
 
 where:
 + `deviceName` - The generic name of the device, eg. WaterTank. If nodes are re-named the node will reply its given name instead of the generic Node name.
@@ -28,30 +28,28 @@ where:
 + `functionName` - The name of a function which may be called by the user.
 
 Example:
-
-`{ "Change" = { "Tank height" = 1500 } }` where 1500 is the current tank height above the ground.
++ `{ "pump" = { "power" = 60 }, { "timer" = 100 } }` - There is a pump, which is set to power of 60% and a timer with 100s remaining, however both these values could be modified if the user chooses.
 
 #### param_desc
 
-`function_parameter` - `{ "parameterName" = defaultValue }`
+function_parameter - `{ "parameterName" = defaultValue }`
 
 Where:
 + `parameterName` - The name of a parameter which can be passed to a function as a request. This name should be descriptive of the variables purpose rather than reflective of the variables name in code as it is what would be displayed to the end user.
 + `defaultValue` - A JSON type which is not an array of objects. This should be a default value for a request, it could be the current value which is being modified or a default value which can be recognised as something to ignore.
 
 Example:
-
-`{ "Height" = 1500 }`
++ `{ "Height" = 1500 }`
 
 #### device_variable
 
 ** No Units **
 
-`device_variable` - `{ "variableName" = variableValue }`
+device_variable - `{ "variableName" = variableValue }`
 
 ** With Units **
 
-`device_variable` - `{ "variableName" = variableValue, "U" = "unitName" }`
+device_variable - `{ "variableName" = variableValue, "U" = "unitName" }`
 
 Where:
 + `variableName` - The descriptive name of a variable
@@ -59,9 +57,8 @@ Where:
 + `unitName` - a string representing a readable expression of the units
 
 Examples:
-
-`{ "Tank Height" = 2423 , "U" = "mm" }`
-`{ "Gate Position" = "Open" }`
++ `{ "Tank Height" = 2423 , "U" = "mm" }`
++ `{ "Gate Position" = "Open" }`
 
 ### gateway_request
 
@@ -103,7 +100,7 @@ JSON is obtained from:
 
 ### node_device
 
-`node_device` - `[ registered_device[1], registered_device[2], registered_device[...], registered_device[N] ]`
+node_device - `[ registered_device[1], registered_device[2], registered_device[...], registered_device[N] ]`
 
 Where:
 + registered_device[1] - Node data
