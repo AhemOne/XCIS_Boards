@@ -6,13 +6,25 @@ JSON is used to transfer data between the device, node, gateway then out to the 
 
 ## registered_device
 
-registered_device - `{ "deviceName" = [ device_parameter[1], device_parameter[2], device_parameter[...], device_parameter[N] ] }`
+registered_device - `{ "deviceName" : { device_object[1], device_object[2], device_object[...], device_object[N] } }`
 
 where:
-+ `deviceName` - The generic name of the device, eg. WaterTank. If nodes are re-named the node will reply its given name instead of the generic Node name.
++ `deviceName` - The generic name of the device, eg. WaterTank, Node.
 
 Example:
-+ `{ "Water Tank" : [ { "Level" : "50%", }, { "Volume" : "509", "U" : "L" }, { "Change" : [ { "height" : 1000 }, { "width" : 600 }, { "space" : 100 ] } ] }` - A Water tank level sensor which is currently at 50% and contains 509 L of water, whose sensor is mounted 1000 mm above the ground, the tank has a width (diameter) of 600 mm and the tank is considered full when there is a space of 100 mm below the sensor position.
++ `{ "Water Tank" : { "Level" : "50%", }, { "Volume" : "509", "U" : "L" }, { "Change" : [ { "height" : 1000 }, { "width" : 600 }, { "space" : 100 ] } ] }` - A Water tank level sensor which is currently at 50% and contains 509 L of water, whose sensor is mounted 1000 mm above the ground, the tank has a width (diameter) of 600 mm and the tank is considered full when there is a space of 100 mm below the sensor position.
+
+## device_object
+
+device_object - `"objectName" : { device_parameter[1], device_parameter[2], device_parameter[...], device_parameter[N] }`
+
+where:
++ `objectName` - The generic name for a functional module within the device, eg. Temp, Motor, Gate 
+
+Example:
++ `"Temp" : { ... }`
++ `"Motor" : { ... }`
++ `"Gate" : { ... }`
 
 ## device_parameter
 
@@ -22,20 +34,20 @@ A device_parameter may be a device_function (input) or device_variable (output).
 
 if device_parameter = `device_function` the following syntax is used
 
-`device_function` - `{ "functionName" : [ function_parameter[1], function_parameter[2], function_parameter[...], function_parameter[N] ] }`
+`device_function` - `{ "functionName" : { function_parameter[1], function_parameter[2], function_parameter[...], function_parameter[N] } }`
 
 where:
 + `functionName` - The name of a function which may be called by the user.
 
 Example:
-+ `{ "pump" : [ { "power" : 60 }, { "timer" : 100 } ] }` - There is a pump, which is set to power of 60% and a timer with 100s remaining, however both these values could be modified if the user chooses.
++ `{ "pump" : { "power" : 60 }, { "timer" : 100 } }` - There is a pump, which is set to power of 60% and a timer with 100s remaining, however both these values could be modified if the user chooses.
 
-#### param_desc
+#### function_parameter
 
 function_parameter - `{ "parameterName" : defaultValue }`
 
 Where:
-+ `parameterName` - The name of a parameter which can be passed to a function as a request. This name should be descriptive of the variables purpose rather than reflective of the variables name in code as it is what would be displayed to the end user.
++ `parameterName` - The name of a parameter which can be passed to a function as a request. This name should be descriptive of the variables purpose rather than reflective of the variables name in code as it is what would be displayed to the end user, the units, if not obvious, should be implied by the name.
 + `defaultValue` - A JSON type which is not an array of objects. This should be a default value for a request, it could be the current value which is being modified or a default value which can be recognised as something to ignore.
 
 Example:
@@ -43,22 +55,15 @@ Example:
 
 #### device_variable
 
-** No Units **
-
-device_variable - `{ "variableName" : variableValue }`
-
-** With Units **
-
-device_variable - `{ "variableName" : variableValue, "U" : "unitName" }`
+device_variable - `{ "variableUnits" : variableValue }`
 
 Where:
-+ `variableName` - The descriptive name of a variable
-+ `variableValue` - 
-+ `unitName` - a string representing a readable expression of the units
++ `variableUnits` - a string representing a readable expression of the units
++ `variableValue` - a non-object JSON value or array of non-object, non-array values
 
 Examples:
-+ `{ "Tank Height" : 2423 , "U" : "mm" }`
-+ `{ "Gate Position" : "Open" }`
++ `{ "mm" : 2423 }` - a length of 2423 mm
++ `{ "m" : [ 16.2, 32.6] }` - position in (x,y) co-ordinates
 
 ### gateway_request
 
@@ -73,12 +78,12 @@ Where:
 functionName and param[s] should be described by a [device_function](#device_function).
 
 Example:
-Consider a water tank sensor with the following [device_function](#device_function): `{ "Change" = [ { "height" = 1000 }, { "width" = 600 }, { "space" = 100 ] } ] }`
+Consider a water tank sensor with the following [device_function](#device_function): `{ "Change" = { { "height" = 1000 }, { "width" = 600 }, { "space" = 100 ] } } }`
 
 
 Perhaps a farmer installs an overflow to their tank 200 mm below the lid, now the tank will never reach 100 mm below. The farmer requests the water tank sensor "space" be set to 200 instead of 100. An example request should be formed like (numbers are made up):
 
-`{ "node" : 4, "device" : 2, "Change" : [ { "height" : 1000 }, { "width" : 600 }, { "space" : 200 } ] }`
+`{ "node" : 4, "device" : 2, "Change" : { { "height" : 1000 }, { "width" : 600 }, { "space" : 200 } } }`
 
 
 ## Gateway
@@ -89,188 +94,6 @@ JSON is obtained from:
 + /lora - Request objects cached by the Gateway
   + reply = `[ node_device[1], node_device[2], node_device[...], node_device[N] ]`
     + `node_device[k]` - the k-th node
-    
-  + example: 
-  ```
-  [
-   [
-      {
-         "Node":[
-            {
-               "Battery":"3.2",
-               "U":"V"
-            },
-            {
-               "Reset":[
-                  {
-                     "now":0
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "Water Tank":[
-            {
-               "Level":"80%"
-            },
-            {
-               "Volume":"814",
-               "U":"L"
-            },
-            {
-               "Change":[
-                  {
-                     "height":1000
-                  },
-                  {
-                     "width":600
-                  },
-                  {
-                     "space":100
-                  }
-               ]
-            }
-         ]
-      }
-   ],
-   [
-      {
-         "Node":[
-            {
-               "Battery":"3.3",
-               "U":"V"
-            },
-            {
-               "Reset":[
-                  {
-                     "now":0
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "Water Tank":[
-            {
-               "Level":"50%"
-            },
-            {
-               "Volume":"509",
-               "U":"L"
-            },
-            {
-               "Change":[
-                  {
-                     "height":1000
-                  },
-                  {
-                     "width":600
-                  },
-                  {
-                     "space":100
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "Bore Pump":[
-            {
-               "Volume":"10",
-               "U":"L/s"
-            },
-            {
-               "Change":[
-                  {
-                     "speed":50
-                  },
-                  {
-                     "Runtime":60
-                  }
-               ]
-            },
-            {
-               "param":[
-                  {
-                     "maxrate":20
-                  }
-               ]
-            }
-         ]
-      }
-   ],
-   [
-      {
-         "Tank Node":[
-            {
-               "Battery":"3.2",
-               "U":"V"
-            },
-            {
-               "Water":"50%"
-            },
-            {
-               "Reset":[
-                  {
-                     "now":0
-                  }
-               ]
-            },
-            {
-               "Change":[
-                  {
-                     "height":1000
-                  },
-                  {
-                     "width":600
-                  },
-                  {
-                     "space":100
-                  }
-               ]
-            }
-         ]
-      }
-   ],
-   [
-      {
-         "Node":[
-            {
-               "Battery":"3.2",
-               "U":"V"
-            },
-            {
-               "Reset":[
-                  {
-                     "now":0
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "Gate":[
-            {
-               "Position":"Closed"
-            },
-            {
-               "Set gate":[
-                  {
-
-                  }
-               ]
-            }
-         ]
-      }
-   ]
-  ]
-  ```
-  
-  Cut and Paste: 
-  + C/C++ `char json[] = "[[{\"Node\":[{\"Battery\":\"3.2\",\"U\":\"V\"},{\"Reset\":[{\"now\":0}]}]},{\"WaterTank\":[{\"Level\":\"80%\"},{\"Volume\":\"814\",\"U\":\"L\"},{\"Change\":[{\"height\":1000},{\"width\":600},{\"space\":100}]}]}],[{\"Node\":[{\"Battery\":\"3.3\",\"U\":\"V\"},{\"Reset\":[{\"now\":0}]}]},{\"WaterTank\":[{\"Level\":\"50%\"},{\"Volume\":\"509\",\"U\":\"L\"},{\"Change\":[{\"height\":1000},{\"width\":600},{\"space\":100}]}]},{\"BorePump\":[{\"Volume\":\"10\",\"U\":\"L/s\"},{\"Change\":[{\"speed\":50},{\"Runtime\":60}]},{\"param\":[{\"maxrate\":20}]}]}],[{\"TankNode\":[{\"Battery\":\"3.2\",\"U\":\"V\"},{\"Water\":\"50%\"},{\"Reset\":[{\"now\":0}]},{\"Change\":[{\"height\":1000},{\"width\":600},{\"space\":100}]}]}],[{\"Node\":[{\"Battery\":\"3.2\",\"U\":\"V\"},{\"Reset\":[{\"now\":0}]}]},{\"Gate\":[{\"Position\":\"Closed\"},{\"Setgate\":[{}]}]}]]";`
-  + JavaScript `var json = JSON.parse("[[{\"Node\":[{\"Battery\":\"3.2\",\"U\":\"V\"},{\"Reset\":[{\"now\":0}]}]},{\"WaterTank\":[{\"Level\":\"80%\"},{\"Volume\":\"814\",\"U\":\"L\"},{\"Change\":[{\"height\":1000},{\"width\":600},{\"space\":100}]}]}],[{\"Node\":[{\"Battery\":\"3.3\",\"U\":\"V\"},{\"Reset\":[{\"now\":0}]}]},{\"WaterTank\":[{\"Level\":\"50%\"},{\"Volume\":\"509\",\"U\":\"L\"},{\"Change\":[{\"height\":1000},{\"width\":600},{\"space\":100}]}]},{\"BorePump\":[{\"Volume\":\"10\",\"U\":\"L/s\"},{\"Change\":[{\"speed\":50},{\"Runtime\":60}]},{\"param\":[{\"maxrate\":20}]}]}],[{\"TankNode\":[{\"Battery\":\"3.2\",\"U\":\"V\"},{\"Water\":\"50%\"},{\"Reset\":[{\"now\":0}]},{\"Change\":[{\"height\":1000},{\"width\":600},{\"space\":100}]}]}],[{\"Node\":[{\"Battery\":\"3.2\",\"U\":\"V\"},{\"Reset\":[{\"now\":0}]}]},{\"Gate\":[{\"Position\":\"Closed\"},{\"Setgate\":[{}]}]}]]");`
-
 
 + /lora?id=k
   + reply = `[ node_device[1] ]`
